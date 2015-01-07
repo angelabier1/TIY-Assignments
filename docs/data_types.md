@@ -52,7 +52,30 @@ Data Types
 
 ```
 
+### `Array`
+* **What does it mean?** Arrays are ordered, integer-indexed collections of any object.
+* **How do you make one?** `array = Array.new` or `array = [1,5,12,19,20]`
+* **Why would you want one of those?** Arrays provide a way to store things and access them late. You could use an array to 
+keep track of students  `array = [Joe, Angela, Spencer,Kelly, Andell, Peter, Ivan, Jeff]` you can also use them to 
+* **What can you do with a string?**
+```ruby
+  # You can convert them into strings:
+  numbers = [1,2,3,6,7]
+  numbers.to_s #=> "[1, 2, 3, 6, 7]"
 
+  # You can sort an array:
+  numbers.sort #=> [1, 2, 3, 6, 7]
+
+  # You can use push to add to an array:
+  numbers.push '12' => [1, 2, 3, 6, 7, "12"]
+  
+  # You can remove items from an array with pop:
+  numbers.pop => "12"
+  
+  
+ 
+
+```
 
 
 
