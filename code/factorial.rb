@@ -3,3 +3,4 @@ def factorial(num)
 end  
 
 puts factorial(20)
+puts factorial(45)
