@@ -56,3 +56,10 @@ class TestDeck < MiniTest::Unit::TestCase
 
 end
 
+class TestDealer < MiniTest::Unit::TestCase
+
+  def setup
+    @dealer = Blackjack.new.dealer
+  end
+end
+
