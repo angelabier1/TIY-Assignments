@@ -11,7 +11,7 @@ class Blackjack
 end
 
 class Deck
-  attr_accessor :cards
+  attr_accessor :cards, :shuffled_cards
   def initialize
     @cards = []
 
@@ -24,9 +24,9 @@ class Deck
     end
   end
 
-  #def shuffle #shuffle cards. ! changes array.
-  #  @cards = @cards.shuffle!
-  #end
+  def shuffle #shuffle cards. ! changes array.
+    @shuffled_cards = @cards.shuffle
+  end
 
  # def deal #remove one card from shuffled deck
  #   @cards.pop
