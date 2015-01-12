@@ -53,4 +53,8 @@ class TestDeck < MiniTest::Unit::TestCase
     assert_equal 52, @deck.cards.length
   end
 
+  def test_shuffled_cards_not_equal_to_cards
+    assert_equal false, @deck.cards == @deck.shuffled_cards
+  end
+
 end
