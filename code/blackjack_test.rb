@@ -5,10 +5,11 @@ require './blackjack'
 class TestBlackjack < MiniTest::Unit::TestCase
   #there's a deck of cards
    #there are 52 cards
-   #there a 4 sets of 14 cards represented by 1-10,J, Q, K, A
-    #cards 1..10 have the same corresponding values of 1..10.
+   #there a 4 sets of 13 cards represented by 2-10,J, Q, K, A
+    #cards 2..10 have the same corresponding values of 2..10.
     # J, Q, K each have a value of 10
     # A has a value of 11
+      #Card values: 2,3,4,5,6,7,8,9,10,10,10,10,11 (13 Cards) * 4 Suits = 52 Cards
   #there is one dealer
   #there are 1+ player(s)
   #the dealer deals a hand to each player and self.
@@ -37,10 +38,6 @@ class TestBlackjack < MiniTest::Unit::TestCase
     assert @blackjack.deck
   end
 
- # def test_deck_has_52_cards
-  #  assert_equal 52, cards.length
- # end
-
 end
 
 class TestDeck < MiniTest::Unit::TestCase
@@ -58,3 +55,4 @@ class TestDeck < MiniTest::Unit::TestCase
   end
 
 end
+
