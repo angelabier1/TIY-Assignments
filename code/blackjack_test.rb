@@ -61,5 +61,9 @@ class TestDealer < MiniTest::Unit::TestCase
   def setup
     @dealer = Blackjack.new.dealer
   end
+
+  def test_dealer_hand_total_equal_to_zero
+    assert_equal true, @dealer.hand_total == 0
+  end
 end
 
