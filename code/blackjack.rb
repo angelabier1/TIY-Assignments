@@ -5,9 +5,9 @@ class Blackjack
     @deck = Deck.new
   end
 
-  def hand
-    @hand = hand
-  end
+ # def hand
+ #   @hand = hand
+ # end
 end
 
 class Deck
@@ -15,7 +15,7 @@ class Deck
   def initialize
     @cards = []
 
-    values = [1..10,10,10,10,11]
+    values = [1,2,3,4,5,6,7,8,9,10,10,10,10,11]
 
     4.times do
       values.each do |value|
