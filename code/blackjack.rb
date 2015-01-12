@@ -24,18 +24,18 @@ class Deck
     end
   end
 
-  def shuffled_cards
-    @cards = @cards.shuffle!
-  end
+  #def shuffle #shuffle cards. ! changes array.
+  #  @cards = @cards.shuffle!
+  #end
 
-  def hand
-    #card = cards.pop
-  end
+ # def deal #remove one card from shuffled deck
+ #   @cards.pop
+ # end
 end
 
-class Dealer
+#class Dealer
   #attr_accessor
-  def initialize
+ # def initialize
 
-  end
-end
+ # end
+#end
