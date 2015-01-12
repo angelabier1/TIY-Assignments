@@ -1,5 +1,5 @@
 class Blackjack
-  attr_accessor :deck, :hand #this means we can interact with the instance variable @deck
+  attr_accessor :deck, :hand, :dealer #this means we can interact with the instance variable @deck
   # and we can pretend it is a method: Blackjack.new.deck
   def initialize #this runs when Blackjack.new is called
     @deck = Deck.new
