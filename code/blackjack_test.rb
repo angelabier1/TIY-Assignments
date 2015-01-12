@@ -49,5 +49,8 @@ class TestDeck < MiniTest::Unit::TestCase
     @deck = Blackjack.new.deck
   end
 
+  def test_deck_has_52_cards
+    assert_equal 52, @deck.cards.length
+  end
 
 end
