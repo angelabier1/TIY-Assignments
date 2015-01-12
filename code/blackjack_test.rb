@@ -29,22 +29,25 @@ class TestBlackjack < MiniTest::Unit::TestCase
     @blackjack = Blackjack.new
   end
 
-  #def test_blackjack_exists
-  #  assert @blackjack
-  #end
+  def test_blackjack_exists
+    assert @blackjack
+  end
 
-  #def test_deck_exists
-  #  assert @blackjack.deck
-  #end
+  def test_deck_exists
+    assert @blackjack.deck
+  end
 
  # def test_deck_has_52_cards
- #   assert_equal 52, cards.length
+  #  assert_equal 52, cards.length
  # end
 
-=begin
-  def test_blackjack_deck_has_cards
+end
 
+class TestDeck < MiniTest::Unit::TestCase
 
+  def setup
+    @deck = Blackjack.new.deck
   end
-=end
+
+
 end
