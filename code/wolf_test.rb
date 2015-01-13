@@ -11,6 +11,7 @@ class TestWolf < MiniTest::Unit::TestCase
 
   def setup #this runs before each test
     @wolf = Wolf.new('wolfie', 23)
+    @wolves = []
   end
 
   def test_wolf_exists
@@ -25,10 +26,6 @@ class TestWolf < MiniTest::Unit::TestCase
     assert_equal "HOWWWWWWLLLLLL!", @wolf.howl_louder
   end
 
-  def test_wolf_can_join_pack
-    assert_equal true, @wolf.join_pack
-  end
-
   def test_wolf_is_dominant_to
     wolfram = Wolf.new('wolfram', 45)
     assert_equal false, @wolf.dominant_to(wolfram)
@@ -37,6 +34,10 @@ class TestWolf < MiniTest::Unit::TestCase
   def test_wolf_is_submissive_to
     wolfram = Wolf.new('wolfram', 45)
     assert_equal true, @wolf.submissive_to(wolfram)
+  end
+
+  def test_wolf_can_join_pack
+    assert_equal ['wolfie'], @wolf.join_pack
   end
 
 
