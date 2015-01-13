@@ -4,15 +4,12 @@
 #Wolf can how louder if older than 3 than if it's younger
 
 class Wolf
-  attr_accessor :name, :age, :wolf
+  attr_accessor :name, :age, :wolf, :wolves
 
   def initialize(name,age)
     @name = name
     @age = age
-  end
-
-  def join_pack
-    true
+    @wolves = wolves
   end
 
   def howl
@@ -44,4 +41,9 @@ class Wolf
         false
     end
   end
+
+  def join_pack
+    @wolves = [] unless @wolves
+    @wolves << @name
   end
+end
