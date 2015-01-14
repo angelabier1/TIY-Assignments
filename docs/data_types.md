@@ -65,6 +65,21 @@ keep track of students  `array = [Joe, Angela, Spencer,Kelly, Andell, Peter, Iva
 
   # You can sort an array:
   numbers.sort #=> [1, 2, 3, 6, 7]
+<<<<<<< HEAD
+
+  # You can use push to add to an array:
+  numbers.push '12' => [1, 2, 3, 6, 7, "12"]
+  
+  # You can remove items from an array with pop:
+  numbers.pop => "12"
+  
+  
+ 
+
+```
+
+=======
+>>>>>>> 8965e49020640ae991075baf745a4ae885ec204f
 
   # You can use push to add to an array:
   numbers.push '12' => [1, 2, 3, 6, 7, "12"]
