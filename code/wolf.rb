@@ -9,7 +9,6 @@ class Wolf
   def initialize(name,age)
     @name = name
     @age = age
-    @wolves = wolves
   end
 
   def howl
@@ -44,6 +43,6 @@ class Wolf
 
   def join_pack
     @wolves = [] unless @wolves
-    @wolves << @name
+    @wolves << wolf.name
   end
 end

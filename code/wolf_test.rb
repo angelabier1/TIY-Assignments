@@ -37,7 +37,7 @@ class TestWolf < MiniTest::Unit::TestCase
   end
 
   def test_wolf_can_join_pack
-    assert_equal ['wolfie'], @wolf.join_pack
+    assert_equal ['wolfie'],@wolf.join_pack
   end
 
 
