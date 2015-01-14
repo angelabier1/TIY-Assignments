@@ -48,3 +48,8 @@ class Int_To_Eng_Wrd
       num_digits_reversed = number.to_s.reverse
       digit_count = 0
       num_digits_reversed.chars.each_with_index do |digit, index|
+      digit_as_number = Integer(digit)
+        skip_zero(digit_as_number) do 
+          if digit_count == 0
+            word_equiv_result << "#{Num_to_word[digit_as_number]}"
+          elsif ten_to_twenty?(digit_as_number, digit_count)	
