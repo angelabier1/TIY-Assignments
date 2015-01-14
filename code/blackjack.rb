@@ -1,14 +1,22 @@
 class Blackjack
-  attr_accessor :deck, :hand, :dealer #this means we can interact with the instance variable @deck
+  attr_accessor :deck, :hand, :dealer,:player,:dealt_cards #this means we can interact with the instance variable @deck
   # and we can pretend it is a method: Blackjack.new.deck
   def initialize #this runs when Blackjack.new is called
     @deck = Deck.new
     @dealer = Dealer.new
+    @player = Player.new
   end
 
- #def hand
-  #  @hand = []
-  #end
+  def deal
+    @Deck.shuffle.pop
+  end
+
+ def hand
+    @hand = []
+    2.times do
+      @hand = @hand << deck.deal
+    end
+ end
 end
 
 class Deck
@@ -26,12 +34,28 @@ class Deck
   end
 
   def shuffle #shuffle cards. ! changes array.
-    @shuffled_cards = @cards.shuffle
+    @shuffled_cards = @cards.shuffle!
   end
 
- # def deal #remove one card from shuffled deck - possible to do yield twice to get two initial cards?
- #   @cards.pop
- # end
+ def deal #remove one card from shuffled deck - possible to do yield twice to get two initial cards?
+    @shuffled_cards.pop
+ end
+end
+
+class Player
+  attr_accessor  :hand_total,:hand
+  def initialize
+  @hand = []
+  @hand_total = 0
+  end
+
+  #def hand
+  #  @hand = @hand << deck.deal
+  #end
+
+  #def bust(hand_total)
+   # hand_total > 21
+  #end
 end
 
 class Dealer
