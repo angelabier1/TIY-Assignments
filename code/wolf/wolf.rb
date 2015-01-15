@@ -42,7 +42,8 @@ class Wolf
   end
 
   def join_pack
-    @wolves = [] unless @wolves
-    @wolves << wolf.name
+    @wolves = []
+    @wolves << @name
+    @wolves
   end
 end
