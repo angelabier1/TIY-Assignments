@@ -15,11 +15,11 @@ class MogulTest < MiniTest::Unit::TestCase
 
   def test_mogul_laughs_at_less_fortunate_mogul
     less_fortunate_mogul = Mogul.new("Peter", 1)
-    assert_equal @mogul.laughs_at?(less_fortunate_mogul)
+    assert_equal true, @mogul.laughs_at?(less_fortunate_mogul)
   end
 
   def test_mogul_does_not_laugh_at_richer_mogul
-    richer_mogul = Mogul.new("Bill Gates(no relation", 42)
-    assert_equal @mogul.laughs_at?(richer_mogul), false
+    richer_mogul = Mogul.new("Bill Gates(no relation)", 42)
+    assert_equal false, @mogul.laughs_at?(richer_mogul)
   end
 end

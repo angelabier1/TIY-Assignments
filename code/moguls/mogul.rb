@@ -8,9 +8,9 @@ class Mogul
 	def laughs_at?(other_mogul)
 		if @net_worth > other_mogul.net_worth
 			true
-
-		end
-		true
+		else
+			false
+	  end
 	end
 end
 
