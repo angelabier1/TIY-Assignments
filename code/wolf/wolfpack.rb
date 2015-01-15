@@ -7,26 +7,47 @@
   # A pack of 30 wolves can eat a rhinoceros
 
 class Wolfpack
-  attr_accessor :wolves
+  attr_accessor :leader, :wolfpack,:name, :age
 
-  def initialize
-    @wolves = [] unless @wolves
+  def initialize(wolves)
+    @wolfpack = wolves
   end
 
   def is_leader
-    @wolves.sort_by(age)
+    @leader = @wolfpack.sort_by {|wolf| wolf.age }.last
   end
 
-  def can_hunt
-    if @wolves.length > 2 && < 5
-      "The Wolfpack can hunt a gazelle! "
-    elsif @wolves.length > 5 && < 30
-      "The Wolfpack can hunt a water buffalo"
-    else
-      @wolves.length > 30
-      "The Wolfpack can hunt a rhinoceros"
+  def more_than_one_wolf
+    if @wolfpack.length > 1
+    true
     end
   end
+
+=begin
+  def can_hunt_gazelle
+    if @wolfpack.length > 2 && < 5
+      true
+    else
+      false
+    end
+  end
+
+  def can_hunt_water_buffalo
+    if @wolfpack.length > 5 && < 30
+     true
+    else
+      false
+    end
+  end
+
+  def can_hunt_rhino
+    if @wolfpack.length > 30
+      true
+    else
+       false
+    end
+  end
+=end
 
 
  end
