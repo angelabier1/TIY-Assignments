@@ -14,7 +14,11 @@ require './wolf'
 
 class TestWolfpack < MiniTest::Unit::TestCase
   def setup
-    @wolfpack = Wolfpack.new
+    wolfie = Wolf.new('wolfie', 12)
+    wolfram = Wolf.new('wolfram', 34)
+    @bob = Wolf.new('bob', 56)
+    @wolves = [wolfie, wolfram, @bob]
+    @wolfpack = Wolfpack.new(@wolves)
   end
 
   def test_wolfpack_exists
@@ -22,7 +26,7 @@ class TestWolfpack < MiniTest::Unit::TestCase
   end
 
   def test_more_than_one_wolf
-    assert_equal true, @wolfpack.wolves
+    assert @wolfpack.more_than_one_wolf
   end
 
 end
