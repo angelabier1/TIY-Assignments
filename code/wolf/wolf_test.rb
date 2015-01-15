@@ -11,7 +11,6 @@ class TestWolf < MiniTest::Unit::TestCase
 
   def setup #this runs before each test
     @wolf = Wolf.new('wolfie', 23)
-    @wolves = []
   end
 
   def test_wolf_exists
@@ -37,8 +36,7 @@ class TestWolf < MiniTest::Unit::TestCase
   end
 
   def test_wolf_can_join_pack
-    assert_equal ['wolfie'],@wolf.join_pack
+    assert_equal ['wolfie'], @wolf.join_pack
   end
-
 
 end
