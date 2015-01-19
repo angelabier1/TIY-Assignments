@@ -13,5 +13,9 @@ class Deck
 		@cards.length
 	end
 
+	def deal(n)
+		@cards.pop(n)
+	end
+
 
 end
