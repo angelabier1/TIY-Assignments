@@ -14,5 +14,13 @@ class DeckTest < MiniTest::Unit::TestCase
 		assert_equal 52, @deck.size
 	end
 
+	def test_deck_can_deal_cards
+		cards = @deck.deal(3)
+		assert_kind_of Card, cards[0]
+		assert_kind_of Card, cards[2]
+		assert_equal 49, @deck.size
+		assert_equal 3, cards.length
+	end
+
 
 end
