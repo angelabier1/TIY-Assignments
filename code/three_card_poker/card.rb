@@ -1,3 +1,4 @@
+require './to_english'
 class Card
 
 	attr_reader :suit, :rank
@@ -18,6 +19,14 @@ class Card
 			13
 		else
 			14
+		end
+	end
+
+	def display
+		if @rank.is_a?(Fixnum)
+			"#{@rank.to_english.capitalize} of #{suit.to_s.capitalize}"
+		else
+			"#{@rank.to_s.capitalize} of #{suit.to_s.capitalize}"
 		end
 	end
 
