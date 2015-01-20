@@ -36,13 +36,13 @@ class Hand
 	end
 
 	def type
-		if self.unique_ranks == 3 && self.unique_suits > 1
+		if self.unique_ranks == 3 && self.unique_suits > 1   && self.high_value - self.low_value + 1  != self.size
 			:high_card
 		elsif self.unique_ranks == 2 && self.unique_suits > 1
 			:pair
 		elsif self.unique_suits == 1  && self.unique_ranks > 2 && self.high_value-self.low_value + 1 != self.size
 			:flush
-		elsif self.high_value - self.low_value + 1 == self.size && self.unique_suits > 1
+		elsif self.high_value - self.low_value + 1 == self.size && self.unique_suits > 1  && self.unique_ranks > 2
 			:straight
 		elsif self.unique_ranks == 1 && self.unique_suits > 1
 			:three_of_a_kind
