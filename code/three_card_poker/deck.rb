@@ -13,6 +13,10 @@ class Deck
 		@cards.length
 	end
 
+	def [](index)
+		@cards[index]
+	end
+
 	def deal(n)
 		@cards.pop(n)
 	end
