@@ -6,7 +6,7 @@ class Deck
 				((2..10).to_a + [:jack, :queen, :king, :ace]).map do |rank|
 				Card.new(rank,suit)
 				end
-		end.flatten.shuffle
+		end.flatten.shuffle!
 	end
 
 	def size
@@ -20,6 +20,8 @@ class Deck
 	def deal(n)
 		@cards.pop(n)
 	end
+
+
 
 
 end
