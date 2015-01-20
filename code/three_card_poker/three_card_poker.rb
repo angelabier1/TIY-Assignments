@@ -1,18 +1,22 @@
 require './player'
 require './dealer'
+require './card'
+require './deck'
+require './hand'
 
 class ThreeCardPoker
 
-	attr_reader :player, :dealer, :winner, :push
+	attr_reader :player, :dealer, :winner, :push, :deck, :cards
 	attr_accessor :pair_plus, :ante, :hand
 
 	def initialize(deck = nil)
 
 		@deck = deck || Deck.new
-		@cards = @deck.deal(3)
-		@hand = Hand.new(@cards)
-		@player = Player.new(@hand, @pair_plus=0,@ante = 0)
-		@dealer = Dealer.new(@hand)
+		player_cards = @deck.deal(3)
+		player_hand = Hand.new(player_cards)
+		@player = Player.new(player_hand, @pair_plus=0,@ante = 0)
+		dealer_hand = Hand.new(@deck.deal(3))
+		@dealer = Dealer.new(dealer_hand)
 		check_for_winner
 	end
 
@@ -22,25 +26,26 @@ class ThreeCardPoker
 	end
 
 	def check_for_winner
+		@winner =
 		if @player.hand.value  > @dealer.hand.value
-			@winner = @player
+			 @player
 		elsif @player.hand.value < @dealer.hand.value
-			@winner = @dealer
+			@dealer
 		elsif @player.hand.value == @dealer.hand.value && @player.hand.type != :pair
 			if @player.hand.high_value > @dealer.hand.high_value
-				@winner = @player
+				 @player
 			elsif @player.hand.high_value < @dealer.hand.high_value
-				@winner = @dealer
+				 @dealer
 			else
 				if @player.hand.mid_value > @dealer.hand.mid_value
-					@winner = @player
+					 @player
 				elsif @player.hand.mid_value < @dealer.hand.mid_value
-					@winner = @dealer
+					 @dealer
 				else
 					if @player.hand.low_value > @dealer.hand.low_value
-						@winner = @player
+						@player
 					elsif @player.hand.low_value < @dealer.hand.low_value
-						@winner = @dealer
+						@dealer
 					else
 						@push = true
 					end
@@ -48,15 +53,15 @@ class ThreeCardPoker
 			end
 		else
 			if @player.hand.pair_rank[0] > @dealer.hand.pair_rank[0]
-				@winner = @player
+				 @player
 			elsif
 				@player.hand.pair_rank[0] < @dealer.hand.pair_rank[0]
-				@winner = @dealer
+					@dealer
 			else
 				if @player.hand.kicker[0] > @dealer.hand.kicker[0]
-					@winner = @player
+					@player
 				elsif @player.hand.kicker[0] < @dealer.hand.kicker[0]
-					@winner = @dealer
+					@dealer
 				else
 					@push = true
 				end
