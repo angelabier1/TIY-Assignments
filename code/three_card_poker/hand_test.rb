@@ -46,9 +46,12 @@ class HandTest < MiniTest::Unit::TestCase
 		hand2 = Hand.new(cards2)
 		cards3 = [Card.new(6,:hearts), Card.new(7,:hearts), Card.new(8,:hearts)]
 		hand3 = Hand.new(cards3)
+		cards4 = [Card.new(2, :hearts),Card.new(3,:spades),Card.new(4,:hearts)]
+		hand4 = Hand.new(cards4)
 		assert_equal :high_card, @hand.type
 		assert_equal :flush, hand2.type
 		assert_equal :straight_flush, hand3.type
+		assert_equal :straight, hand4.type
 	end
 
 	def test_hand_returns_rank_of_pair
@@ -58,9 +61,9 @@ class HandTest < MiniTest::Unit::TestCase
 	end
 
 	def test_pair_returns_value_for_kicker
-		cards4 = [Card.new(8, :clubs), Card.new(8, :hearts), Card.new(7, :spades)]
+		cards4 = [Card.new(8, :clubs), Card.new(8, :hearts), Card.new(:ace, :spades)]
 		hand4 = Hand.new(cards4)
-		assert_equal 7, hand4.kicker[0]
+		assert_equal 14, hand4.kicker[0]
 	end
 
 	def test_hand_displays_type
