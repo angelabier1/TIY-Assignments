@@ -51,7 +51,7 @@ class Hand
 		end
 	end
 
-	def hand_value
+	def value
 		if self.type == :high_card
 			1
 		elsif self.type == :pair
@@ -64,6 +64,36 @@ class Hand
 			5
 		else
 			6
+		end
+	end
+
+	def pair_rank
+		get_ranks = @cards.map {|card| card.rank}
+		get_ranks.select {|e| get_ranks.count(e) > 1 }.uniq
+	end
+
+	def kicker
+		get_kicker = @cards.map{|card| card.rank}
+		get_kicker.select {|e| get_kicker.count(e) == 1}
+	end
+
+	def card_display
+		@cards.map{|card| card.display }.join(' and ')
+	end
+
+	def type_display
+		if self.type == :high_card
+			"High Card"
+		elsif self.type == :pair
+			"Pair of #{pair_rank}"
+		elsif self.type == :flush
+			"Flush"
+		elsif self.type == :straight
+			"Straight"
+		elsif self.type == :three_of_a_kind
+			"Three of a Kind"
+		else
+			"Straight Flush"
 		end
 	end
 
