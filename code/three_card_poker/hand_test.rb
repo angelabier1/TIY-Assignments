@@ -51,5 +51,22 @@ class HandTest < MiniTest::Unit::TestCase
 		assert_equal :straight_flush, hand3.type
 	end
 
+	def test_hand_returns_rank_of_pair
+		cards4 = [Card.new(8, :clubs), Card.new(8, :hearts), Card.new(7, :spades)]
+		hand4 = Hand.new(cards4)
+		assert_equal 8, hand4.pair_rank[0]
+	end
+
+	def test_pair_returns_value_for_kicker
+		cards4 = [Card.new(8, :clubs), Card.new(8, :hearts), Card.new(7, :spades)]
+		hand4 = Hand.new(cards4)
+		assert_equal 7, hand4.kicker[0]
+	end
+
+	def test_hand_displays_type
+		assert_equal 'High Card', @hand.type_display
+	end
+
+
 
 end
