@@ -1,3 +1,5 @@
+require './to_english'
+
 class Card
 	# :jack, :queen, :king = 10 and :ace = 11
 	# :jack = 11, :queen = 12, :king =13, :ace =14
@@ -9,17 +11,12 @@ class Card
 		@suit = suit
 	end
 
-	def value
-		if @value is_a?(Fixnum)
-			 @value
-		end
-	end
 
 	def display
-		if @value is_a?(Fixnum)
-     "#{@value.to_english.capitalize} of #{@suit.capitalize} "
+		if @value.is_a?(Fixnum)
+     "#{@value.to_english.capitalize} of #{@suit.to_s.capitalize}"
     else
-     "#{@value.to_s.capitalize} of #{@suit.capitalize}"
+     "#{@value.to_s.capitalize} of #{@suit.to_s.capitalize}"
 		end
 	end
 
