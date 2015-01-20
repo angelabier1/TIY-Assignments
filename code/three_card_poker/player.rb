@@ -10,8 +10,7 @@ require './hand'
 
 class Player
 
-	attr_reader :hand
-	attr_accessor :pair_plus, :ante
+	attr_accessor :pair_plus, :ante, :hand
 
 	def initialize(hand, pair_plus = 0, ante = 0)
 		@hand = hand
@@ -20,7 +19,7 @@ class Player
 	end
 
 	def display
-		"Player, would you like to make a bet?"
+		puts "Player, would you like to make a bet?"
 		reply = gets.chomp
 		if reply.downcase == 'yes'
 			puts "How much would you like to put down for your Ante bet?"
@@ -33,12 +32,17 @@ class Player
 		else
 			"Please reply with Yes or No"
 		end
-		"Player has #{card_display}"
+
 	end
 
 	def card_display
-		@hand.map{|card| card.display }.join(' and ')
+		@hand.map{|card| card.display }.join(' \n ')
 	end
+
+	# def pair_plus_display
+	# 	puts "How much would you like to put down for your Pair Plus bet?"
+	# 	@pair_plus += gets.chomp.to_i
+	# end
 
 	def hand_value
 		@hand.value
