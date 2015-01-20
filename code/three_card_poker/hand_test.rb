@@ -67,6 +67,10 @@ class HandTest < MiniTest::Unit::TestCase
 		assert_equal 'High Card', @hand.type_display
 	end
 
+	def test_hand_displays_cards
+		assert_equal "Two of Hearts\nFour of Diamonds\nSix of Clubs", @hand.card_display
+	end
+
 
 
 end

@@ -78,7 +78,7 @@ class Hand
 	end
 
 	def card_display
-		@cards.map{|card| card.display }.join(' and ')
+		@cards.map{|card| card.display }.join("\n")
 	end
 
 	def type_display
