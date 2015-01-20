@@ -1,7 +1,10 @@
-class PokerCard
+require '../card'
 
-	def initialize
+# :jack, :queen, :king = 10 and :ace = 11
 
-	end
+class PokerCard  < Card
+
+	def value
+
 
 end

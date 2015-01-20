@@ -15,4 +15,6 @@ class CardTest < MiniTest::Unit::TestCase
 		assert_equal :hearts, @card.suit
 	end
 
+def test_card_di
+
 end
