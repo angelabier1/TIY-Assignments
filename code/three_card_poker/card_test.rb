@@ -48,4 +48,14 @@ class CardTest < MiniTest::Unit::TestCase
 		assert_equal "King of Spades", card.display
 	end
 
+	def test_card_rank_has_letter_representation
+	  card = Card.new(:queen, :spades)
+		assert_equal "Q", card.to_letter
+	end
+
+	def test_card_can_be_generate_image_link
+
+	end
+
+
 end
