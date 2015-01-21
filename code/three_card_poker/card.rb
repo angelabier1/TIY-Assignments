@@ -22,6 +22,33 @@ class Card
 		end
 	end
 
+	def to_letter
+		if @rank.is_a?(Fixnum)
+			@rank
+		elsif @rank == :jack
+			"J"
+		elsif @rank == :queen
+			"Q"
+		elsif @rank == :king
+			"K"
+		else
+			"A"
+		end
+	end
+
+	def suit_letter
+		if @suit == :clubs
+			"C"
+		elsif @suit == :hearts
+			"H"
+		elsif @suit == :diamonds
+			"D"
+		else
+			"S"
+		end
+	end
+
+
 	def display
 		if @rank.is_a?(Fixnum)
 			"#{@rank.to_english.capitalize} of #{suit.to_s.capitalize}"
@@ -30,8 +57,10 @@ class Card
 		end
 	end
 
+
 	def to_img
-		"<img src="
+
 	end
+
 
 end
