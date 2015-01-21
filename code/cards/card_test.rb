@@ -37,7 +37,9 @@ class CardTest < MiniTest::Unit::TestCase
 	def test_cards_are_comparable
 		six_of_spades = Card.new(6, :spades)
 		jack_of_clubs = Card.new(:jack, :clubs)
-
+		ace_of_hearts = Card.new(:ace, :hearts)
+		assert jack_of_clubs > six_of_spades
+		assert six_of_spades < ace_of_hearts
 	end
 
 end
