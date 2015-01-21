@@ -59,7 +59,17 @@ class Card
 
 
 	def to_img
-
+		if @rank.is_a?(Fixnum)
+			"https://s3-us-west-2.amazonaws.com/tiycards/#{@rank}#{@suit.to_s}.svg"
+		elsif @rank == :ace
+			"https://s3-us-west-2.amazonaws.com/tiycards/A#{@suit.to_s}.svg"
+		elsif  @rank == :king
+			"https://s3-us-west-2.amazonaws.com/tiycards/K#{@suit.to_s}.svg"
+		elsif @rank == :queen
+			"https://s3-us-west-2.amazonaws.com/tiycards/Q#{@suit.to_s}.svg"
+		else
+			"https://s3-us-west-2.amazonaws.com/tiycards/J#{@suit.to_s}.svg"
+		end
 	end
 
 
