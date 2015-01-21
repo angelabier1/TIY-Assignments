@@ -20,6 +20,11 @@ class CardTest < MiniTest::Unit::TestCase
 		assert_equal 10, card.value
 	end
 
+	def test_ace_value_at_11
+		card = Card.new(:ace, :clubs)
+		assert_equal 11, card.value
+	end
+
   def test_numbered_card_displays_suit_and_english_value
 	  assert_equal "Four of Hearts", @card.display
   end
@@ -32,6 +37,7 @@ class CardTest < MiniTest::Unit::TestCase
 	def test_cards_are_comparable
 		six_of_spades = Card.new(6, :spades)
 		jack_of_clubs = Card.new(:jack, :clubs)
+
 	end
 
 end
