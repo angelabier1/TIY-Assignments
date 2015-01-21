@@ -15,15 +15,15 @@ class CardTest < MiniTest::Unit::TestCase
 		assert_equal :hearts, @card.suit
 	end
 
-	def test_face_card_valued_at_10
-		card = Card.new(:jack, :spades)
-		assert_equal 10, card.value
-	end
-
-	def test_ace_value_at_11
-		card = Card.new(:ace, :clubs)
-		assert_equal 11, card.value
-	end
+	# def test_face_card_valued_at_10
+	# 	card = Card.new(:jack, :spades)
+	# 	assert_equal 10, card.value
+	# end
+	#
+	# def test_ace_value_at_11
+	# 	card = Card.new(:ace, :clubs)
+	# 	assert_equal 11, card.value
+	# end
 
   def test_numbered_card_displays_suit_and_english_value
 	  assert_equal "Four of Hearts", @card.display

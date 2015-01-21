@@ -14,12 +14,11 @@ class Card
 		if @value.is_a?(Fixnum)
 			@value
 		elsif @value == :ace
-		  11
+			11
 		else
 			10
 		end
 	end
-
 
 	def display
 		if @value.is_a?(Fixnum)

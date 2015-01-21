@@ -1,17 +1,15 @@
-require '../card'
+require_relative '../card'
 
 class BlackjackCard < Card
 
 	def value
 		if @value.is_a?(Fixnum)
-			 @value
+			@value
 		elsif @value == :ace
-			11
+		  11
 		else
 			10
 		end
 	end
-
-
 
 end
