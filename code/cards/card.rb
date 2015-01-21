@@ -29,8 +29,8 @@ class Card
 		end
 	end
 
-	def ⇔ (other_card)
-		value ⇔ other_card.value
+	def <=>(other_card)
+		value <=> other_card.value
 	end
 
 
