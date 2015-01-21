@@ -1,14 +1,23 @@
-require './to_english'
+require_relative 'to_english'
 
 class Card
-	# :jack, :queen, :king = 10 and :ace = 11
-	# :jack = 11, :queen = 12, :king =13, :ace =14
+	include Comparable
 
 	attr_reader :suit, :value
 
 	def initialize(value, suit)
 		@value = value
 		@suit = suit
+	end
+
+	def value
+		if @value.is_a?(Fixnum)
+			@value
+		elsif @value == :ace
+		  11
+		else
+			10
+		end
 	end
 
 
@@ -18,6 +27,10 @@ class Card
     else
      "#{@value.to_s.capitalize} of #{@suit.to_s.capitalize}"
 		end
+	end
+
+	def ⇔ (other_card)
+		value ⇔ other_card.value
 	end
 
 
