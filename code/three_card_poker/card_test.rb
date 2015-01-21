@@ -54,7 +54,7 @@ class CardTest < MiniTest::Unit::TestCase
 	end
 
 	def test_card_can_be_generate_image_link
-		assert_equal "<img src=https://s3-us-west-2.amazonaws.com/tiycards/5C.svg>", @card.to_img
+		assert_equal "https://s3-us-west-2.amazonaws.com/tiycards/5clubs.svg", @card.to_img
 	end
 
 
