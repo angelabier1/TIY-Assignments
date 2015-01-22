@@ -1,0 +1,20 @@
+
+
+<!DOCTYPE html>
+<html>
+<head> Deck of Cards </head>
+
+<body>
+<% require_relative '../code/three_card_poker/deck.rb'%>
+
+    <div style="Padding: 20px; Margin: 20px">
+      <% @deck = Deck.new %>
+      <% cards = @deck.deal(52)%>
+      <% cards.each do |card| %>
+      <img src="<%="#{card.to_img}"%>">
+      <% end %>
+    </div>
+
+
+
+</body>
