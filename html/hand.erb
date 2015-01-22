@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+      img {
+          float: left;
+          margin: 0 1.5%;
+          width: 30% ;
+      }
+    </style>
+
+</head>
+
+<body>
+<% require_relative '../code/three_card_poker/deck.rb'%>
+
+<div style="Padding: 20px; Margin: 20px">
+  <% @deck = Deck.new %>
+  <% cards = @deck.deal(3)%>
+
+  <% cards.each do |card| %>
+
+      <img src="<%="#{card.to_img}"%>">
+
+     <% end %>
+
+</div>
+
+
+</body>
+
+</html>
