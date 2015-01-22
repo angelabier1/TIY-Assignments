@@ -36,23 +36,13 @@
 <div style="Padding: 20px; Margin: 20px">
   <% @deck = Deck.new %>
   <% cards = @deck.deal(52)%>
-    <ul>
+
   <% cards.each do |card| %>
-    <ul>
 
-     <li><a href="<%="#{card.to_img}"%>"><%="#{card.display}"%></a></br>
-
-
-      <%end%>
-
-
-
-    </ul>
         <a href="<%="#{card.to_img}"%>"><%="#{card.display}"%></a></br>
 
 
   <%end%>
-
 </div>
 
 
