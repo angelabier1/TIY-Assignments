@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
     <style>
-      img {
+      figure {
           float: left;
           margin: 0 1.5%;
           width: 30% ;
+      }
+      figcaption {
+          font-family: 'Slabo 27px', serif;
+          font-size: 1.5em;
+          text-align: center;
+          margin-left: auto;
+          margin-righ: auto;
+          width: 70%;
+      }
+
+      img {
+          width: 320px;
+          height: auto;
       }
     </style>
 
@@ -19,9 +33,10 @@
   <% cards = @deck.deal(3)%>
 
   <% cards.each do |card| %>
-
+       <figure>
       <img src="<%="#{card.to_img}"%>">
-
+         <figcaption><%="#{card.display}"%></figcaption>
+       </figure>
      <% end %>
 
 </div>
