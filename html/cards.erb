@@ -1,12 +1,13 @@
 
-
 <!DOCTYPE html>
 <html>
 <head> Deck of Cards </head>
 
 <body>
 <% ((2..10).to_a + ["Q", "J", "K", "A"]).each do |value| ["C","H","D","S"].each do |suit| %>
+
         <div style="Padding: 20px; Margin: 20px"> <img src="file:///Users/angelabier/TIY-Assignments/code/html/Card_images/<%="#{value}#{suit}"%>.svg" max-width="100%" height="105px" >
         </div> <% end end %>
 </body>
 </html>
+
