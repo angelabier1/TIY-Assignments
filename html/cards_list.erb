@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>List of Cards</title>
+  <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+  <style>
+
+      header {
+          font-family: 'Slabo 27px', serif;
+          font-size: 4.0em;
+          text-align: center;
+          font-style: bold;
+          color: #FFF;
+
+      }
+
+      img {
+          width: 320px;
+          height: auto;
+      }
+
+          a {font-family: 'Slabo 27px', serif;
+              font-size: 1.5em;
+              text-align: left;
+              font-style: bold;
+              color: #FFF;
+          }
+  </style>
+
+</head>
+
+<body background="https://s3-us-west-2.amazonaws.com/tiycards/casino_card_background_wallpaper_hd_1920x1080_by_giozaga-d7intx0.jpg">
+<header> LIST OF CARDS </header>
+<% require_relative '../code/three_card_poker/hand.rb'%>
+
+<div style="Padding: 20px; Margin: 20px">
+  <% @deck = Deck.new %>
+  <% cards = @deck.deal(52)%>
+    <ul>
+  <% cards.each do |card| %>
+    <ul>
+
+     <li><a href="<%="#{card.to_img}"%>"><%="#{card.display}"%></a></br>
+
+
+      <%end%>
+
+
+
+    </ul>
+        <a href="<%="#{card.to_img}"%>"><%="#{card.display}"%></a></br>
+
+
+  <%end%>
+
+</div>
+
+
+
+
+
+</body>
+
+
+</html>
