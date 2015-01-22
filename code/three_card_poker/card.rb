@@ -1,4 +1,4 @@
-require './to_english'
+require_relative './to_english'
 class Card
 
 	attr_reader :suit, :rank
@@ -22,31 +22,31 @@ class Card
 		end
 	end
 
-	def to_letter
-		if @rank.is_a?(Fixnum)
-			@rank
-		elsif @rank == :jack
-			"J"
-		elsif @rank == :queen
-			"Q"
-		elsif @rank == :king
-			"K"
-		else
-			"A"
-		end
-	end
+	# def to_letter
+	# 	if @rank.is_a?(Fixnum)
+	# 		@rank
+	# 	elsif @rank == :jack
+	# 		"J"
+	# 	elsif @rank == :queen
+	# 		"Q"
+	# 	elsif @rank == :king
+	# 		"K"
+	# 	else
+	# 		"A"
+	# 	end
+	# end
 
-	def suit_letter
-		if @suit == :clubs
-			"C"
-		elsif @suit == :hearts
-			"H"
-		elsif @suit == :diamonds
-			"D"
-		else
-			"S"
-		end
-	end
+	# def suit_letter
+	# 	if @suit == :clubs
+	# 		"C"
+	# 	elsif @suit == :hearts
+	# 		"H"
+	# 	elsif @suit == :diamonds
+	# 		"D"
+	# 	else
+	# 		"S"
+	# 	end
+	# end
 
 
 	def display
@@ -60,15 +60,15 @@ class Card
 
 	def to_img
 		if @rank.is_a?(Fixnum)
-			"https://s3-us-west-2.amazonaws.com/tiycards/#{@rank}#{@suit.to_s}.svg"
+			"https://s3-us-west-2.amazonaws.com/tiycards/png/#{@rank}#{@suit.to_s}.png"
 		elsif @rank == :ace
-			"https://s3-us-west-2.amazonaws.com/tiycards/A#{@suit.to_s}.svg"
+			"https://s3-us-west-2.amazonaws.com/tiycards/png/A#{@suit.to_s}.png"
 		elsif  @rank == :king
-			"https://s3-us-west-2.amazonaws.com/tiycards/K#{@suit.to_s}.svg"
+			"https://s3-us-west-2.amazonaws.com/tiycards/png/K#{@suit.to_s}.png"
 		elsif @rank == :queen
-			"https://s3-us-west-2.amazonaws.com/tiycards/Q#{@suit.to_s}.svg"
+			"https://s3-us-west-2.amazonaws.com/tiycards/png/Q#{@suit.to_s}.png"
 		else
-			"https://s3-us-west-2.amazonaws.com/tiycards/J#{@suit.to_s}.svg"
+			"https://s3-us-west-2.amazonaws.com/tiycards/png/J#{@suit.to_s}.png"
 		end
 	end
 
