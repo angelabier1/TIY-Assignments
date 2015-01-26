@@ -1,0 +1,286 @@
+/*
+Theme Name: FLATI - Red
+Description:  Designed by josweb.
+Author:  Jo
+Purchase:  http://themeforest.net/user/josweb
+*/
+
+.header { background: #333; }
+#banner { background: #e9e6e1;  }
+
+::-moz-selection { color: #fff; background: #E74C3C; }
+::selection { color:#fff; background: #E74C3C; }
+
+blockquote { border-left: 3px solid #E74C3C; }
+
+.zocial, a.zocial { background: #C0392B; color: #fff;}
+.zocial:hover, .zocial:focus { background: #E74C3C; color: #fff; }
+
+.well { background-color: #D3CDC4; }
+.dropcap2 { color: #E74C3C; }
+
+/**** BUTTONS ****/
+.btn-primary { background-color: #E74C3C;  border: 0; }
+.btn-primary:hover { background-color: #333;}
+.btn-inverse { background-color: #333;}
+.btn-inverse:hover { background-color: #222;}
+.btn:visited, .btn:focus { color: #fff; }
+.btn-outline:hover { background-color: #3e4957!important;}
+
+/**** LINKS ****/
+a { color: #E74C3C; }
+a:hover { color: #555;}
+
+/**** WORK LINKS ****/
+.portfolio-links i { background-color: #3E4957; }
+.portfolio-links a:hover i { background-color: #323A45;}
+
+/***************************************************
+	COLOURS
+ ***************************************************/
+
+.hue {color: #E74C3C; }
+.white { color: #fff; }
+.magnolia { color: #E9E6E1;}
+.grey { color: #999; }
+.grey2 { color: #69767F; }
+.asphalt {color: #333; }
+.colour { color: #C0392B; }
+.hue_block { 
+	background-color: #E74C3C;
+	color: #fff;
+	padding: 0px 4px 2px; 
+	-moz-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.hue_block:hover { background-color: #C0392B; }
+
+/**** IMAGE HOVER COLOUR ****/
+.hover_img:hover, .hover_colour {  
+	background: #C0392B url(../img/zoom.png) no-repeat 50% 50%;
+	-webkit-box-shadow: inset 0 0 0 7px rgba(255,255,255,0.15);
+	-moz-box-shadow: inset 0 0 0 7px rgba(255,255,255,0.15);
+    box-shadow: inset 0 0 0 7px rgba(255,255,255,0.15);  
+}
+
+/***************************************************
+	MENU
+ ***************************************************/
+
+#main_menu  .nav > li > a { color: #bbb; }
+#main_menu  .nav > .active > a, #main_menu  .nav> .active > a:hover { background: #C0392B; color: #fff!important; }
+#main_menu .nav > li > a:hover { background: transparent; color: #fff!important; }
+.dropdown-menu { background: #333; }
+.dropdown-menu  li a { color: #bbb;  }
+.dropdown-menu > li > a:hover, 
+.dropdown-menu > li > a:focus, 
+.dropdown-submenu:hover > a, 
+.dropdown-submenu:focus > a,
+.nav > li > a:focus { text-decoration: none;  color: #fff; background: transparent!important; }
+.navbar-toggle { color: #C0392B; background-color: #252525; }
+.navbar-toggle > .btn:hover, .navbar-toggle > .btn:focus { color: #C0392B; text-decoration: none; }
+.navbar-toggle:hover { color: #fff; background-color: #C0392B; }
+
+/**** INDEX BOX ICONS ****/
+.intro-icon-large {  color: #E74C3C; }
+.tile.tile-hot:before { background: url("../img/red_ribbon.png") 0 0 no-repeat; }
+
+/**** TEAM MEMBER COLOUR BORDERS ****/
+.th { background: #E74C3C; }
+.th:hover { background: #C0392B; }
+
+
+/***************************************************
+	ABOUT PAGE
+ ***************************************************/
+
+/* Progress Bars */
+.progress .bar { background: #E74C3C; }
+
+/* About Info Bottom Strip */
+.strip { background-color: #e9e6e1; }
+
+/* Big Button */
+.big_button {
+	display: block;
+	background: #555;
+	color: #fff;
+	-webkit-box-shadow: 0 5px 0px #444;
+    -moz-box-shadow: 0 5px 0px #444;
+    box-shadow: 0 5px 0px #444;
+}
+.big_button a { color: #fff; opacity: 1.0;}
+.big_button:hover {
+	color: #fff;
+	background: #666; 
+	-webkit-box-shadow: 0 5px 0px #555;
+	-moz-box-shadow: 0 5px 0px #555;
+	box-shadow: 0 5px 0px #555;
+}
+.big_button:active {
+	color: #fff;
+	background:#555;
+	-webkit-box-shadow: 0 3px 0px #333;
+	-moz-box-shadow: 0 3px 0px #333;
+	box-shadow: 0 3px 0px #333;
+}
+.big_button:visited, .big_button:focus { color:#fff; }
+
+
+/***************************************************
+	TESTIMONIALS
+ ***************************************************/
+
+.testimonial1, .testimonial2, .testimonial3 { background-color: #C0392B; color: #fff; }
+.testimonial1:after, .testimonial2:after, .testimonial3:after { border-top-color: #C0392B; }
+.testimonial2 { background-color: #E9E6E1; color: #999; }
+.testimonial2:after { border-top-color: #E9E6E1; }
+.testimonial3 { background-color: #333; color: #fff; }
+.testimonial3:after { border-top-color: #333; }
+.quote_sections_hue { background: #E74C3C; }
+.quote_sections_dark { background: #333; }
+.quote_sections_light { background: #E9E6E1; }
+
+/* Testimonial Icons */
+.testimonial-icon-disc, .testimonial-icon-disc2, .testimonial-icon-disc3 { background-color:#E74C3C; }
+.testimonial-icon-disc2 { background-color: #333; }
+.testimonial-icon-disc3 { background-color: #E9E6E1; }
+
+/***************************************************
+	BLOG
+ ***************************************************/
+
+/* Date */
+.btn-blog1 { background: #C0392B; color: #fff; }
+/* Small Date */
+.btn-blog2 { background: #C0392B; color: #fff; }
+.btn-blog1:hover, .btn-blog2:hover { background: #C0392B; color: #fff; }
+a.com_no { color: #fff; }
+.post_link a:hover, .read_more a:hover { color: #C0392B; }
+
+/* Pager */
+.pager li > a, .pager li > span { color: #fff; background:#C0392B;  }
+.pager li > a:hover,
+.pager li > a:focus,
+.pager .disabled > a,
+.pager .disabled > a:hover,
+.pager .disabled > a:focus,
+.pager .disabled > span  { color: #fff; background: #333; }
+
+/* Pagination */
+.pagination ul > li > a, .pagination ul > li > span {  border: 2px solid #C0392B; }
+.pagination ul > li > a:hover,
+.pagination ul > li > a:focus,
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+	background-color: #C0392B;
+    color: #fff;
+}
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+    background-color: #C0392B;
+    color: #fff;
+    cursor: default;
+}
+
+/***************************************************
+	CONTACT
+ ***************************************************/
+
+.required{ color: #E74C3C; }
+#ajax-contact-form  input.btn-form:visited, #ajax-contact-form input.btn-form:focus { background:#E74C3C; }
+
+/***************************************************
+	FOOTER
+ ***************************************************/
+
+#footer { background-color: #C0392B; color: #fff; }
+#footer2 { background: #333; color: #999; }
+.copyright a { color: #888; }
+.copyright a:hover { color: #777; }
+.follow_us a { opacity:0.5!important; }
+.follow_us a:hover {opacity:1.0!important; }
+
+/***************************************************
+	PORTFOLIO, GALLERY & THUMB CAROUSELS
+ ***************************************************/
+
+/**** PORTFOLIO ****/
+#filters li a, #filters2 li a { color: #555; border: 2px solid #767676; }
+#filters li a.selected, #filters2 li a.selected { background: #C0392B; color:#fff;  border: 2px solid #C0392B; }
+#filters li a:hover, #filters2 li  a:hover{  color: #fff;  border: 2px solid #333; background: #333; }
+
+/**** GALLERY ****/
+.holder a {  color: #555; border: 2px solid #767676; }
+.holder a:hover {color: #fff; border:2px solid #333; background: #333; }
+.holder a.jp-previous, .holder a.jp-next, .holder a.jp-disabled, .holder a.jp-disabled, focus:a.jp-disabled {
+	border: 2px solid #767676;
+	color: #767676;
+}
+.holder a.jp-current { background:#C0392B; color: #fff; border: 2px solid #C0392B; }
+a.jp-disabled:hover, .holder a.jp-next:hover { color:#fff; border: 2px solid #333; background: #333; }
+
+/* CAROUSELS */	
+.slider-title { background-color: #333; color: #bbb; }
+.slider-title:after { border-top-color: #333; }
+
+/* Carousel Arrows*/
+.widget-scroll-prev:hover, .widget-scroll-next:hover, .widget-scroll-prev2:hover, .widget-scroll-next2:hover { background:#E74C3C; }
+
+
+/***************************************************
+	404 PAGE, PRICING TABLE, ACCORDIAN, TABS
+ ***************************************************/
+
+/**** 404 PAGE ****/
+.screen-bg { background-color: #C0392B; }
+
+/**** PRICING TABLE ****/
+.pricing-header-row-1 { background-color: #333; }
+.pricing-header-row-2 { background-color: #E7E7E7; }
+.pricing-content-row-odd { background-color: #eee; color: #555; }
+.pricing-content-row-even { background-color: #E7E7E7; color: #555; }
+.pricing-footer { background-color: #333; }
+.pricing-table h3 { color:#C0392B; }
+.tile2.tile-hot:before { background: url("../img/red_ribbon.png") 0 0 no-repeat;}
+
+/**** ACCORDION ****/
+.panel-heading { background-color: #C0392B!important; color: #fff!important; }
+.panel-heading a:hover { color: #fff; }
+.panel-heading .accordion-toggle:after { color: #fff; }
+.panel { background-color: #f6f6f6!important; }
+
+/**** TABS ****/
+.nav-tabs { border-bottom: 1px solid #ccc; }
+.nav-tabs a { color: #fff!important; background-color: #E74C3C!important; }
+.nav-tabs .active a, .nav-tabs a:hover, .nav-tabs .active a:focus { background-color: #C0392B!important;}
+
+/***************************************************
+	TIMELINE
+ ***************************************************/
+
+/* The line */
+.cbp_tmtimeline:before { background: #444; }
+/* The date/time */
+.cbp_tmtimeline > li .cbp_tmtime span:last-child { color: #C0392B; }
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime span:last-child { color: #E74C3C; }
+/* Right content */
+.cbp_tmtimeline > li .cbp_tmlabel { background: #C0392B; color: #fff; }
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel { background: #E74C3C; }
+/* The triangle */
+.cbp_tmtimeline > li .cbp_tmlabel:after { border-right-color: #C0392B; }
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after { border-right-color: #E74C3C; }
+/* The icons */
+.cbp_tmtimeline > li .cbp_tmicon { color: #fff; background: #E74C3C; box-shadow: 0 0 0 8px #555; }
+/* Media Queries */
+@media screen and (max-width: 47.2em) {
+.cbp_tmtimeline > li .cbp_tmlabel:after { border-bottom-color:  #C0392B; }
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after { border-bottom-color:  #E74C3C; }
+ }
+
+/**** ICONS EXAMPLE BG HOVER ****/
+.fontawesome-icon-list .fa-hover a:hover{background-color:#E74C3C;}
+
+

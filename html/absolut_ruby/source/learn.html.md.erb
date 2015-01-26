@@ -1,0 +1,96 @@
+---
+title: learn(ruby)
+<% l = locals[:learned] %>
+---
+
+<!-- Add your site or application content here -->
+<!--header-->
+<div class="header">
+  <!--menu-->
+  <nav id="main_menu" class="navbar" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <!--toggle-->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+          <i class="fa fa-bars"></i>
+        </button>
+        <!--logo-->
+        <div class="logo">
+          <a href="index.html"><img src="img/logo.png" alt="" class="animated bounceInDown" /></a>
+        </div>
+      </div>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="nav navbar-nav pull-right">
+          <li><a href="index.html">Home</a> </li>
+
+
+          <li class="dropdown active"><a href="javascript:{}">Learned</a>
+            <ul class="dropdown-menu">
+              <% data.learned.items.each do |dli| %>
+            <li><a href="<%= dli[:link]%>.html"><%=dli[:name]%></a></li>
+              <% end %>
+            </ul>
+          </li>
+
+          <li><a href="assignments.html">Assigned</a></li>
+
+
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<!--//header-->
+<div id="banner">
+  <div class="container intro_wrapper">
+    <div class="inner_content">
+      <h1>Work</h1>
+      <h1 class="title">What I've Learned</h1>
+      <h1 class="intro">
+        A little rundown of what I've <span class="hue">learned</span> so far.
+      </h1>
+    </div>
+  </div>
+</div>
+<div class="container wrapper">
+  <div class="inner_content">
+
+        <div id="options">
+          <ul id="filters" class="option-set" data-option-key="filter">
+            <li><a href="#filter" data-option-value="*" class=" selected">All</a></li>
+            <li><a href="#filter" data-option-value=".category01">Category 01</a></li>
+            <li><a href="#filter" data-option-value=".category02">Category 02</a></li>
+            <li><a href="#filter" data-option-value=".category03">Category 03</a></li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+        <!-- portfolio_block -->
+
+    <div class="row">
+          <div class="projects">
+            <% data.learned.items.each do |item|%>
+            <div class="col-xs-12 col-sm-6 col-md-3 element category01" data-category="category01">
+              <div class="hover_img">
+                <a href="img/portfolio/1.jpg" data-rel="prettyPhoto[portfolio1]">
+                  <img src="img/portfolio/1.jpg" alt="" /></a>
+              </div>
+              <div class="item_description">
+                <a href="<%=item[:link]%>.html"><span><%= item[:name]%></span></a><br/>
+                <%= item[:description]%>
+              </div>
+            </div>
+               <% end %>
+          </div>
+        </div>
+  </div>
+</div>
+
+
+
+<!-- //portfolio_block -->
+
+<div class="pad25 hidden-md hidden-lg"></div>
+<!--//page-->
+

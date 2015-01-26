@@ -1,0 +1,50 @@
+---
+items:
+- name: Arrays
+  type: Data Type
+  link: arrays
+  description: |
+      An array is an ordered, integer indexed list of elements which can include any object include strings, hashes
+      other arrays as well as numbers.
+      There are a couple of ways that a new array can be created including:
+       `array = Array.new` or `array =[]`
+
+- name: Hashes
+  type: Data Type
+  link: hashes
+  description: Hashes are an object indexed list of elements which like arrays, can include any object
+
+
+- name: Strings
+  type: Data Type
+  link: strings
+  description: Strings are a group of characters in a program including letters, numbers, symbols and spaces.
+
+- name: Numbers
+  type: Data Type
+  link: numbers
+  description: |
+     Numbers can be integers or floats.
+     Integers are numbers without decimal points and floats are numbers with decimal points
+
+- name: Git
+  type: Git
+  link: git
+  description: |
+    Version control. Git init is only necessary if you would like to create a repository locally. Git clone is
+    used to clone a remote repo, locally. The git-related steps required for each assignment include:
+    <ol>
+    <li>Check if the master branch is currently checked out, which can be done with `git branch`</li>
+    <li>Create a branch & Checkout simultaneously with `git checkout -b branch_name`</li>
+    <li>Create a file and `git push origin branch_name`</li>
+    <li>`git pull origin branch_name` to get the latest updates</li>
+    </ol>
+
+- name: Methods
+  type: Methods
+  link: methods
+  description: |
+    Anything that you find yourself repeating, should go into a method. Methods can take parameters.
+    Adding a question mark to the end of method makes it easier to recognize a Boolean
+
+
