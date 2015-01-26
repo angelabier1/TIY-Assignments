@@ -28,8 +28,13 @@
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
 #  :which_fake_page => "Rendering a fake page with a local variable" }
 data.learned.items.each do |li|
-  proxy "#{li[:name]}.html", "single_portfolio.html", layout=> false, :locals => { :learned => li }, :ignore => true
+  proxy "/#{li[:link]}.html", "/single_portfolio.html", :locals => { :learned => li }, :ignore => true
 end
+
+data.assignments.assignments.each do |item|
+  proxy "/#{item[:name]}.html", "/portfolio.html", :locals => { :assignment => item }, :ignore => true
+end
+
 ###
 # Helpers
 ###
@@ -57,8 +62,6 @@ set :images_dir, 'img'
 
 set :font_dir, 'font'
 
-set :markdown_engine, :redcarpet
-set :markdown, :fenced_code_blocks => true, :smartypants => true
 
 
 

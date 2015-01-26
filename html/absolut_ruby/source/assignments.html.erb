@@ -1,5 +1,5 @@
 ---
-title: assign(ruby)
+title: Assignments
 ---
 
 <!-- Add your site or application content here -->
@@ -63,86 +63,28 @@ title: assign(ruby)
         <li><a href="#filter" data-option-value=".category03">Category 03</a></li>
       </ul>
       <div class="clear"></div>
-    </div>
     <div class="row">
       <!-- portfolio_block -->
       <div class="projects">
+        <% data.assignments.assignments.each do |a|%>
         <div class="col-xs-12 col-sm-6 col-md-6 element datatypes" data-category="datatypes">
           <div class="hover_img">
             <a href="img/portfolio/1.jpg" data-rel="prettyPhoto[portfolio1]">
               <img src="img/portfolio/1.jpg" alt="" /></a>
           </div>
           <div class="item_description">
-            <a href="single_portfolio.html"><span>Item Link</span></a>
+            <a href="<%="#{a[:name]}"%>"><span><%="#{a[:title]}"%></span></a>
             <br>
-            item description
+           <%="#{a[:description]}"%>
           </div>
         </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-6 element  category02" data-category="category02">
-          <div class="hover_img">
-            <a href="img/portfolio/2.jpg" data-rel="prettyPhoto[portfolio1]">
-              <img src="img/portfolio/2.jpg" alt="" /></a>
-          </div>
-          <div class="item_description">
-            <a href="single_portfolio.html"><span>Item Link</span></a>
-            <br>
-            item description
-          </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-6 element category03" data-category="category03">
-          <div class="hover_img">
-            <a href="img/portfolio/3.jpg" data-rel="prettyPhoto[portfolio1]">
-              <img src="img/portfolio/3.jpg" alt="" /></a>
-          </div>
-          <div class="item_description">
-            <a href="single_portfolio.html"><span>Item Link</span></a>
-            <br>
-            item description
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-6 element category01" data-category="category01">
-          <div class="hover_img">
-            <a href="img/portfolio/4.jpg" data-rel="prettyPhoto[portfolio1]">
-              <img src="img/portfolio/4.jpg" alt="" /></a>
-          </div>
-          <div class="item_description">
-            <a href="single_portfolio.html"><span>Item Link</span></a>
-            <br>
-            item description
-          </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-6 element category02" data-category="category02">
-          <div class="hover_img">
-            <a href="img/portfolio/5.jpg" data-rel="prettyPhoto[portfolio1]">
-              <img src="img/portfolio/5.jpg" alt="" /></a>
-          </div>
-          <div class="item_description">
-            <a href="single_portfolio.html"><span>Item Link</span></a>
-            <br>
-            item description
-          </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-6 element category03" data-category="category03">
-          <div class="hover_img">
-            <a href="img/portfolio/6.jpg" data-rel="prettyPhoto[portfolio1]">
-              <img src="img/portfolio/6.jpg" alt="" /></a>
-          </div>
-          <div class="item_description">
-            <a href="single_portfolio.html"><span>Item Link</span></a>
-            <br>
-            item description
-          </div>
-          <div class="clear"></div>
+        <% end %>
+        <div class="clear"></div>
         </div>
         <!-- //portfolio-->
       </div>
     </div>
   </div>
-</div>
+  </div>
 <div class="pad25 hidden-md hidden-lg"></div>
 <!--//page-->

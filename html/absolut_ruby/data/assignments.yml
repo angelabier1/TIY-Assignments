@@ -1,3 +1,31 @@
+---
+
 assignments:
-- title:
-  link:
+- title: "Wolfpack"
+  image: "img/wolves.png"
+  name: wolfpack
+  description: >
+               The Wolfpack
+
+               A wolfpack is a group of wolves. A wolf has a name and an age. The leader of the wolfpack is the oldest wolf. All wolves are submissive to older wolves and dominant over younger wolves.
+
+               A wolf can join a pack. If a wolf joins a pack and becomes leader, the pack throws out the former leader.
+
+               A wolf can howl. It howls louder if it's older than 3 than if it's younger. If you call out the name of a wolf to its pack, that wolf will howl.
+
+               A wolfpack can take down different sized things depending on how big it is.
+
+               A pack of 2 wolves can hunt a gazelle.
+               A pack of 5 wolves can get a water buffalo.
+               A pack of 30 wolves can eat a rhinoceros.
+               I used a lot of synonyms there in the hunting section. You don't need methods for all of them.
+
+               example method uses:
+
+               old_wolf.submissive_to?(young_wolf) #=> false
+               old_wolf.dominant_over?(young_wolf) #=> true
+               pack_of_2_wolves.can_hunt?(:gazelle)   #=> true
+               pack_of_10_wolves.can_hunt?(:gazelle) #=> true
+
+               wolf.howl #=> 'howwwwl'
+

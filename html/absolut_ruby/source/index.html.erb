@@ -21,16 +21,16 @@ title: absolute(ruby)
 
       <div class="collapse navbar-collapse" id="menu">
         <ul class="nav navbar-nav pull-right">
-          <li class="active"><a href="index.html">Home</a> </li>
+          <li class="active"><%= link_to 'Home', 'index.html', :relative => true %> </li>
 
 
-          <li><a href="learn.html">Learned</a></li>
+          <li><%= link_to 'Learn', '/learn.html', :relative => true %></li>
 
 
-          <li><a href="assignments.html">Assigned</a></li>
+          <li><%= link_to 'Assigned', '/assignments.html', :relative => true %></li>
 
 
-          <li><a href="contact.html">Contact</a></li>
+          <li><%= link_to 'Contact', '/.html', :relative => true %></li>
         </ul>
       </div>
     </div>
@@ -68,7 +68,7 @@ title: absolute(ruby)
 
         <!-- Caption -->
         <div class="caption sfb" data-x="center" data-y="350" data-speed="1100" data-start="1500" data-easing="easeOutExpo">
-          <a href="#" class="btn btn-outline btn-mobile">ASSIGNMENTS</a>
+          <a href="assignments.html" class="btn btn-outline btn-mobile">ASSIGNMENTS</a>
         </div>
       </li>
 

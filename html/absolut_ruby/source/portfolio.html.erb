@@ -1,10 +1,13 @@
 ---
-title: <%=l[:name]%>
-<% l=locals[:learned] %>
+
+
+title: <%=a[:name]%>
+
 ---
 
 <!-- Add your site or application content here -->
 <!--header-->
+<% a=locals[:assignment] %>
 <div class="header">
   <!--menu-->
   <nav id="main_menu" class="navbar" role="navigation">
@@ -25,10 +28,10 @@ title: <%=l[:name]%>
           <li><a href="index.html">Home</a> </li>
 
 
-          <li class="active"><a href="learn.html">Learned</a></li>
+          <li><a href="learn.html">Learned</a></li>
 
 
-          <li><a href="assignments.html">Assigned</a></li>
+          <li class="active"><a href="assignments.html">Assigned</a></li>
 
 
           <li><a href="contact.html">Contact</a></li>
@@ -44,8 +47,8 @@ title: <%=l[:name]%>
 <div id="banner">
   <div class="container intro_wrapper">
     <div class="inner_content">
-      <h1>Learned</h1>
-      <h1 class="title"><%=l[:name]%></h1>
+      <h1>Assigned</h1>
+      <h1 class="title"><%=a[:name]%></h1>
 
       <div class="portfolio-links pad15">
         <a href="#"><span class="fa-stack fa-lg"><i class="fa fa-angle-left fa-stack-1x fa-inverse"></i></span></a>
@@ -75,23 +78,23 @@ title: <%=l[:name]%>
 
       <div class="col-md-4">
 
-        <h2><span><%=l[:name]%></span></h2>
+        <h2><span><%=a[:name]%></span></h2>
 
         <p class="lead">
-          <%=l[:description]%>
+          <%=a[:description]%>
         </p>
 
         <!--<h4><span>Services</span></h4>-->
 
         <!--<ul class="fa-ul">-->
-          <!--<li> Web Design</li>-->
+        <!--<li> Web Design</li>-->
         <!--</ul>-->
 
         <!--<div class="pad15"></div>-->
 
         <!--<p>-->
-          <!--Suspendisse tempor leo at massa laoreet vel tincidunt leo molestie. Proin tristique accumsan nisl, quis sollicitudin urna ullamcorper-->
-          <!--posuere cubilia curae vel.-->
+        <!--Suspendisse tempor leo at massa laoreet vel tincidunt leo molestie. Proin tristique accumsan nisl, quis sollicitudin urna ullamcorper-->
+        <!--posuere cubilia curae vel.-->
         <!--</p>-->
 
         <div class="pad10"></div>
