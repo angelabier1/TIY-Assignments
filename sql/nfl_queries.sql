@@ -8,7 +8,6 @@ SELECT * FROM teams WHERE teams.wins >= 8 AND teams.playoff=0;
 UPDATE teams
 SET name='Losers'
 WHERE teams.wins < 4;
-
 -- Select every team that plays in a city of fewer than 5 million people, and the name of the city
 SELECT teams.*, cities.name FROM teams JOIN cities ON cities.id= teams.city_id AND cities.population_2013 < 5000000;
 -- Select every AFC team that plays in a city that is shrinking in population
