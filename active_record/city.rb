@@ -1,7 +1,8 @@
 class City < ActiveRecord::Base
 	belongs_to :state
 
-
+	# Define a method City.fastest_growing that returns the single fastest growing city
+	# Define a method City.shrinking that returns all cities with decreasing population
 
 	# def self.densest(n)
 	#
